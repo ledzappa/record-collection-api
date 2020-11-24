@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RecordCollectionApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(RecordCollectionApiApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(RecordCollectionApiApplication.class, args);
+  }
 }
