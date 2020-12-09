@@ -1,9 +1,8 @@
 package com.example.service;
 
-import com.example.repository.RecordDao;
-import com.example.model.Record;
+import com.example.model.Test;
+import com.example.repository.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,18 +10,13 @@ import java.util.List;
 @Service
 public class RecordService {
 
-  private final RecordDao recordDao;
+  @Autowired RecordRepository recordRepository;
 
-  @Autowired
-  public RecordService(@Qualifier("fakeDao") RecordDao recordDao) {
-    this.recordDao = recordDao;
+  public Test insertRecord(Test record) {
+    return recordRepository.save(record);
   }
 
-  public int insertRecord(Record record) {
-    return recordDao.insertRecord(record);
-  }
-
-  public List<Record> getAllRecords() {
-    return recordDao.getAllRecords();
+  public List<Test> getAllRecords() {
+    return recordRepository.findAll();
   }
 }

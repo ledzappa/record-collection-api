@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.model.Record;
 import com.example.model.Test;
 import com.example.repository.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,8 @@ public class RecordController {
   @Autowired RecordRepository recordRepository;
 
   @PostMapping
-  public String insertRecord(@RequestBody Test test) {
-    recordRepository.save(test);
-    return "success";
+  public Test insertRecord(@RequestBody Test test) {
+    return recordRepository.save(test);
   }
 
   @GetMapping
