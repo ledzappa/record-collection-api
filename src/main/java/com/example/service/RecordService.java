@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.dao.RecordDao;
+import com.example.repository.RecordDao;
 import com.example.model.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
