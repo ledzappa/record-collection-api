@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.collector.controller;
 
-import com.example.model.Test;
-import com.example.repository.RecordRepository;
+import com.collector.model.Test;
+import com.collector.repository.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
